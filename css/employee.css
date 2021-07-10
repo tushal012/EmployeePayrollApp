@@ -168,7 +168,7 @@ select{
     text-align: center;
 }
 
-error-output {
+error-output{
     margin-left: 10px;
     font-size: 12px;
     font-style: italic;
@@ -212,7 +212,6 @@ error-output {
     .submitButton{
         margin: 0;
     }
-    
     .buttonParent{
         flex-direction: column-reverse;
         align-items: flex-start;
