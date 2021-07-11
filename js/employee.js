@@ -83,6 +83,8 @@ const getInputValueById = (id) => {
     return value;
 }
 
+
+// Reset Form
 const resetForm = () => {
     setValue("#name", "");
     setValue("#salary","");
