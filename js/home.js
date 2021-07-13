@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     employeePayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector(".emp-count").textContent = employeePayrollList.length;
     createInnerHtml();
+    localStorage.removeItem('editEmp')
 });
 
 const getEmployeePayrollDataFromStorage = () => {
@@ -20,6 +21,10 @@ const createInnerHtml = () => {
     </tr>`;
     if(employeePayrollList.length==0) return;
     let innerHtml = `${headerHtml}`;
+    if(employeePayrollList.length==0) {
+        document.querySelector('#table-display').innerHTML = innerHtml;
+        return;
+    }
     for(const employeePayrollData of employeePayrollList){
         innerHtml = `${innerHtml}
         <tr>
@@ -58,4 +63,3 @@ const remove = (node) => {
     createInnerHtml();
 }
 
-localStorage.removeItem("id");
