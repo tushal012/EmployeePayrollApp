@@ -57,7 +57,7 @@ const remove = (node) => {
     const index = employeePayrollList
                                     .map(emp => emp._id)
                                     .indexOf(employeePayrollData._id);
-    employeePayrollList.splice(index,1);
+    employeePayrollList.splice(index, 1);
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
     document.querySelector(".emp-count").textContent = employeePayrollList.length;
     createInnerHtml();

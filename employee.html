@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/employee.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="../js/employee.js"></script>
-    <script src="../js/EmployeePayrollData.js"></script>
-    <script src="../js/site_properties.js"></script>
-    <script src="../js/utility.js"></script>
+    <script src="../js/employee.js" ></script>
+    <script src="../js/EmployeePayrollData.js" ></script>
+    <script src="../js/utility.js" ></script>
+    <script src="../js/site_properties.js" ></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
+        <form class="form" action="../home.html" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -84,7 +84,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
-                <div>
+                <div class="startDate">
                     <select name="Day" id="day">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -119,20 +119,21 @@
                         <option value="31">31</option>
                     </select>
                     <select id = "month" name="Month">
-                        <option value="Jan">January</option>
-                        <option value="Feb">February</option>
-                        <option value="Mar">March</option>
-                        <option value="Apr">April</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
                         <option value="May">May</option>
-                        <option value="Jun">June</option>
-                        <option value="Jul">July</option>
-                        <option value="Aug">August</option>
-                        <option value="Sept">September</option>
-                        <option value="Oct">October</option>
-                        <option value="Nov">November</option>
-                        <option value="Dec">December</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
                     </select>
                     <select id="year" name="Year">
+                        <option value="2021">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
                         <option value="2018">2018</option>
@@ -140,6 +141,7 @@
                         <option value="2016">2016</option>
                     </select>
                 </div>
+                <error-output class = "date-error" for="startDate"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
@@ -154,7 +156,6 @@
             </div>
         </form>
     </div>
-   
+    
 </body>
-
 </html>
